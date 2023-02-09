@@ -1,16 +1,13 @@
+import { Header, Header_Link } from './App.styled';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Header>
+        <Header_Link href="#">Home</Header_Link>
+        <Header_Link href="#">Movies</Header_Link>
+      </Header>
+      <main> </main>
+    </>
   );
 };
