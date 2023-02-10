@@ -1,4 +1,4 @@
-import { Header, HeaderLink } from './App.styled';
+import { Header, HeaderLink, Section } from './App.styled';
 
 export const App = () => {
   return (
@@ -7,7 +7,11 @@ export const App = () => {
         <HeaderLink href="#">Home</HeaderLink>
         <HeaderLink href="#">Movies</HeaderLink>
       </Header>
-      <main> </main>
+      <main>
+        <Section>
+          <h1>Trending today</h1>
+        </Section>
+      </main>
     </>
   );
 };

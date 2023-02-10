@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const Header = styled.header`
   padding: 20px 40px;
+  margin-bottom: 50px;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
@@ -28,8 +29,11 @@ export const HeaderLink = styled.a`
     background: linear-gradient(to right, #ff0000, #fff200, #1e9600);
   }
 
-  :hover::before,
-  :focus::before {
+  &:hover::before,
+  &:focus::before {
     width: 100%;
   }
+`;
+export const Section = styled.section`
+  margin: 0px 30px;
 `;
