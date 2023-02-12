@@ -1,3 +1,4 @@
+import { GetTrendMovie } from './Api/Api';
 import { Header, HeaderLink, Section } from './App.styled';
 
 export const App = () => {
@@ -10,6 +11,8 @@ export const App = () => {
       <main>
         <Section>
           <h1>Trending today</h1>
+          <div>data Axios</div>
+          <GetTrendMovie />
         </Section>
       </main>
     </>
