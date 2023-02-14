@@ -1,6 +1,6 @@
 import * as API from '../../components/utils/Api';
 import { useEffect, useState } from 'react';
-import { Section } from './Home.styled';
+import { H1, Section } from './Home.styled';
 import { MovieList } from 'components/MovieList/MovieList';
 
 export const Home = () => {
@@ -12,8 +12,7 @@ export const Home = () => {
 
   return (
     <Section>
-      <h1>Trending today</h1>
-      <div>data Axios</div>
+      <H1>Trending today</H1>
 
       <MovieList trendMovie={trendMovie} />
     </Section>
