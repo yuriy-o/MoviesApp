@@ -1,20 +1,20 @@
-import { GetTrendMovie } from './Api/Api';
-import { Header, HeaderLink, Section } from './App.styled';
+import { Routes, Route } from 'react-router-dom';
+
+import { SharedLayout } from './SharedLayout/SharedLayout';
+import { Home } from 'pages/Home/Home';
+import { NotFound } from 'pages/NotFound/NotFound';
 
 export const App = () => {
   return (
     <>
-      <Header>
-        <HeaderLink href="#">Home</HeaderLink>
-        <HeaderLink href="#">Movies</HeaderLink>
-      </Header>
-      <main>
-        <Section>
-          <h1>Trending today</h1>
-          <div>data Axios</div>
-          <GetTrendMovie />
-        </Section>
-      </main>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          {/* <Route path="home" element={<Home />} /> */}
+
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
     </>
   );
 };
