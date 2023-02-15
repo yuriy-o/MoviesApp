@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { Box, FilmName, InfoWrap, Item, List } from './MovieList.styled';
 import photoNotFound from '../../pages/NotFound/photo-not-found.jpg';
 
-export const MovieList = ({ trendMovie }) => {
+export const MovieList = ({ trendMovie, state }) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
-  console.log(trendMovie);
+  // console.log(trendMovie);
 
   return (
     <List>
@@ -18,7 +18,7 @@ export const MovieList = ({ trendMovie }) => {
 
             return (
               <Item key={id}>
-                <Link href="http://" target="_blank" rel="noopener noreferrer">
+                <Link to={`/movies/${id}`} state={{ from: state }}>
                   <img
                     src={
                       poster_path
