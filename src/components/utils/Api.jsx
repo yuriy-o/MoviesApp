@@ -17,7 +17,7 @@ export const getTrendMovie = async () => {
 export const getMovieById = async movieId => {
   try {
     const response = await axios.get(
-      `${BASE_URL}movie/${movieId}?api_key=${KEY}&language=eng`
+      `${BASE_URL}/movie/${movieId}?api_key=${KEY}&language=eng`
     );
     return response.data;
   } catch (error) {

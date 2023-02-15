@@ -14,15 +14,17 @@ export const MovieDetails = () => {
     getMovieById(movieId).then(data => setMovieData(data));
   }, [movieId]);
 
-  console.log(movieData);
-  console.log(movieId);
-
   const location = useLocation();
   const from = location.state?.from ?? '/';
 
+  const { poster_path, title, vote_average, overview } = movieData;
+  console.log('movieData', movieData);
+
   return (
     <Section>
-      <BackLink to={from}>Go Back</BackLink>
+      {/* //! Умова → ховає кнопку [Go Back], якщо на сторінку попали за посиланням у якого нема попереднього переходу */}
+      {location?.state?.from && <BackLink to={from}>Go Back</BackLink>}
+
       <img src="" alt="" />
     </Section>
   );
