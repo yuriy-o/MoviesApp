@@ -21,9 +21,7 @@ export const MovieList = ({ trendMovie, state }) => {
                 <Link to={`/movies/${id}`} state={{ from: state }}>
                   <img
                     src={
-                      poster_path
-                        ? `${BASE_URL}${poster_path}`
-                        : { photoNotFound }
+                      poster_path ? `${BASE_URL}${poster_path}` : photoNotFound
                     }
                     alt={title}
                     loading="lazy"
