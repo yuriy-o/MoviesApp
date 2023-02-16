@@ -37,7 +37,7 @@ export const Reviews = () => {
           } else {
             imageURL = `https://www.themoviedb.org/t/p/w150_and_h150_face/${avatar_path}`;
           }
-
+          console.log(rating);
           return (
             <li key={id}>
               <WrapInfoAuthor>
@@ -50,7 +50,7 @@ export const Reviews = () => {
                     <Span>Username:</Span> {username}
                   </Text>
                   <Text>
-                    <Span>Rating:</Span> {rating || 0}
+                    <Span>Rating:</Span> {rating ?? 0}
                   </Text>
                 </div>
               </WrapInfoAuthor>
