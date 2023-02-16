@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { getCreditsById } from '../../components/utils/Api';
 import sorryImage from '../../pages/NotFound/sorryImage.svg';
-import { Div, Img, List, Span } from './Cast.styled';
+import { Div, Img, Item, List, Span } from './Cast.styled';
 
 export const Cast = () => {
   const { movieId } = useParams();
@@ -26,7 +26,7 @@ export const Cast = () => {
       {cast &&
         cast.map(({ profile_path, id, character, name }) => {
           return (
-            <li key={id}>
+            <Item key={id}>
               <Img
                 src={profile_path ? `${imageURL}${profile_path}` : sorryImage}
                 alt={name}
@@ -39,7 +39,7 @@ export const Cast = () => {
                   <Span>Character:</Span> {character}
                 </p>
               </Div>
-            </li>
+            </Item>
           );
         })}
     </List>
