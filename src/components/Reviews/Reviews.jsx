@@ -30,8 +30,6 @@ export const Reviews = () => {
           const { rating, avatar_path, username } = author_details;
           let imageURL = '';
 
-          console.log('avatar_path', avatar_path);
-
           if (avatar_path === null) {
             imageURL = sorryImage;
           } else if (avatar_path?.includes('http')) {
@@ -41,34 +39,32 @@ export const Reviews = () => {
           }
 
           return (
-            <>
-              <li key={id}>
-                <WrapInfoAuthor>
-                  <Img src={imageURL} alt={author} title={username} />
-                  <div>
-                    <Text>
-                      <Span>Author:</Span> {author}
-                    </Text>
-                    <Text>
-                      <Span>Username:</Span> {username}
-                    </Text>
-                    <Text>
-                      <Span>Rating:</Span> {rating || 0}
-                    </Text>
-                  </div>
-                </WrapInfoAuthor>
-                <p>
-                  <Span>Content:</Span> {content}
-                </p>
-                <p>
-                  <Span>URL:</Span>{' '}
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    {url}
-                  </a>
-                </p>
-              </li>
+            <li key={id}>
+              <WrapInfoAuthor>
+                <Img src={imageURL} alt={author} title={username} />
+                <div>
+                  <Text>
+                    <Span>Author:</Span> {author}
+                  </Text>
+                  <Text>
+                    <Span>Username:</Span> {username}
+                  </Text>
+                  <Text>
+                    <Span>Rating:</Span> {rating || 0}
+                  </Text>
+                </div>
+              </WrapInfoAuthor>
+              <p>
+                <Span>Content:</Span> {content}
+              </p>
+              <p>
+                <Span>URL:</Span>{' '}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {url}
+                </a>
+              </p>
               <Hr />
-            </>
+            </li>
           );
         })}
       </List>
