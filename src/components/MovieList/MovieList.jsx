@@ -6,8 +6,6 @@ import photoNotFound from '../../pages/NotFound/photo-not-found.jpg';
 export const MovieList = ({ trendMovie, state }) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
-  // console.log(trendMovie);
-
   return (
     <List>
       {trendMovie &&
@@ -31,7 +29,7 @@ export const MovieList = ({ trendMovie, state }) => {
                   <FilmName>{title}</FilmName>
                   <Box>
                     <p>
-                      Rating: <strong>{average}</strong>
+                      Rating: <strong>{average === '0.0' ? 0 : average}</strong>
                     </p>
                     <p>
                       Release year: <strong>{year}</strong>
