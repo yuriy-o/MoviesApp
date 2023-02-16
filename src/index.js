@@ -7,8 +7,8 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* //! Додає додаткове значення в URL */}
-    {/* <BrowserRouter basename="/goit-react-hw-05-movies"> */}
-    <BrowserRouter>
+    <BrowserRouter basename="/goit-react-hw-05-movies">
+    {/* <BrowserRouter> */}
       <App />
     </BrowserRouter>
   </React.StrictMode>

@@ -7,11 +7,11 @@ export const SharedLayout = () => {
   return (
     <>
       <WrapHeader>
-        <HeaderLink href="/">
+        <HeaderLink href="/goit-react-hw-05-movies/">
           <MdHome />
           Home
         </HeaderLink>
-        <HeaderLink href="/movies">
+        <HeaderLink href="/goit-react-hw-05-movies/movies">
           <MdOutlineLocalMovies />
           Movies
         </HeaderLink>
