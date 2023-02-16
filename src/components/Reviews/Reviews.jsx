@@ -54,15 +54,15 @@ export const Reviews = () => {
                   </Text>
                 </div>
               </WrapInfoAuthor>
-              <p>
+              <Text>
                 <Span>Content:</Span> {content}
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Span>URL:</Span>{' '}
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   {url}
                 </a>
-              </p>
+              </Text>
               <Hr />
             </li>
           );

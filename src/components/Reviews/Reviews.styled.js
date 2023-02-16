@@ -16,7 +16,7 @@ export const Img = styled.img`
   margin-right: 15px;
 `;
 export const Text = styled.p`
-  margin-bottom: 10px;
+  font-size: 20px;
 `;
 export const Warn = styled.p`
   font-size: xx-large;
