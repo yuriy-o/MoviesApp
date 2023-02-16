@@ -52,7 +52,7 @@ export const MovieDetails = () => {
         <Div>
           <H1>{title}</H1>
           <Info>
-            <Span>User Score:</Span> {Score}%
+            <Span>User Score:</Span> {Score ? Score : 0}%
           </Info>
           <Info>
             <Span>Release Year:</Span> {release_date}
