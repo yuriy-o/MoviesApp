@@ -1,4 +1,4 @@
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { Suspense, useEffect, useState } from 'react';
 
 import { getMovieById } from '../../components/utils/Api';
@@ -11,6 +11,7 @@ import {
   H1,
   Img,
   Info,
+  LinkInfo,
   Span,
   Wrap,
 } from './MovieDetails.styled';
@@ -76,14 +77,14 @@ export const MovieDetails = () => {
       <h2>Additional information</h2>
       <ul>
         <li>
-          <Link to={'cast'} state={{ from }}>
+          <LinkInfo to={'cast'} state={{ from }}>
             Cast
-          </Link>
+          </LinkInfo>
         </li>
         <li>
-          <Link to={'reviews'} state={{ from }}>
+          <LinkInfo to={'reviews'} state={{ from }}>
             Reviews
-          </Link>
+          </LinkInfo>
         </li>
       </ul>
       <hr />

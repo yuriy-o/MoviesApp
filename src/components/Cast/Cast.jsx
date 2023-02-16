@@ -13,6 +13,7 @@ export const Cast = () => {
 
   useEffect(() => {
     getCreditsById(movieId).then(data => setCast(data.cast));
+    setIsCastLoading(true);
   }, [movieId]);
 
   if (cast.length === 0 && isCastLoading) {

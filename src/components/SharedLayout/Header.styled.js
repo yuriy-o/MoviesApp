@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
 
 export const WrapHeader = styled.header`
+  display: flex;
+
   padding: 20px 40px;
   margin-bottom: 50px;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 export const HeaderLink = styled.a`
+  display: flex;
+  align-items: center;
+
   position: relative;
   text-decoration: none;
   color: black;

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const BackLink = styled(NavLink)`
   display: block;
@@ -49,4 +49,8 @@ export const Info = styled.p`
 `;
 export const Span = styled.span`
   font-weight: 700;
+`;
+export const LinkInfo = styled(Link)`
+  font-size: 20px;
+  font-weight: 500;
 `;
