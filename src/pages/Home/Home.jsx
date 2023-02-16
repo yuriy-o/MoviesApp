@@ -17,7 +17,7 @@ export const Home = () => {
     <Section>
       <H1>Trending today</H1>
 
-      <MovieList trendMovie={trendMovie} state={location} />
+      <MovieList movies={trendMovie} state={location} />
     </Section>
   );
 };

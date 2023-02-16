@@ -29,7 +29,7 @@ export const Wrap = styled.div`
   margin-bottom: 20px;
 `;
 export const Img = styled.img`
-  width: 345px;
+  width: 343px;
   height: 515px;
 
   margin-right: 35px;

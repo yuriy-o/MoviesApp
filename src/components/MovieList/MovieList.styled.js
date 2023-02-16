@@ -30,3 +30,7 @@ export const Box = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+export const Img = styled.img`
+  width: 343px;
+  height: 515px;
+`;
