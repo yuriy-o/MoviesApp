@@ -1,8 +1,8 @@
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { Suspense, useEffect, useState } from 'react';
 
-import { getMovieById } from '../../components/utils/Api';
-import photoNotFound from '../../pages/NotFound/photo-not-found.jpg';
+import { getMovieById } from '../../utils/Api';
+// import photoNotFound from '../../pages/NotFound/photo-not-found.jpg';
 
 import { Section } from '../../pages/Home/Home.styled';
 import {
@@ -12,6 +12,7 @@ import {
   Img,
   Info,
   LinkInfo,
+  Loading,
   Span,
   Wrap,
 } from './MovieDetails.styled';
@@ -46,10 +47,14 @@ export const MovieDetails = () => {
       {location?.state?.from && <BackLink to={from}>Go Back</BackLink>}
 
       <Wrap>
-        <Img
+        <Loading>
+          <Img src={`${imageURL}${poster_path}`} alt={title} />
+        </Loading>
+
+        {/* <Img
           src={poster_path ? `${imageURL}${poster_path}` : photoNotFound}
           alt={title}
-        />
+        /> */}
         <Div>
           <H1>{title}</H1>
           <Info>

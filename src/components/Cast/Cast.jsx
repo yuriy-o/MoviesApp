@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getCreditsById } from '../../components/utils/Api';
+import { getCreditsById } from '../../utils/Api';
 import sorryImage from '../../pages/NotFound/sorryImage.svg';
 import { Div, Img, Item, List, Span } from './Cast.styled';
 

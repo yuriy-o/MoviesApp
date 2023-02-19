@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getReviewsById } from 'components/utils/Api';
+import { getReviewsById } from 'utils/Api';
 import { Span } from 'components/Cast/Cast.styled';
 import { Hr, Img, List, Text, Warn, WrapInfoAuthor } from './Reviews.styled';
 import sorryImage from '../../pages/NotFound/NoImageAvailable2.svg';

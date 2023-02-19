@@ -1,11 +1,11 @@
-import * as API from '../../components/utils/Api';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import * as API from '../../utils/Api';
 import { H1, Section } from './Home.styled';
 import { MovieList } from 'components/MovieList/MovieList';
 
-export const Home = () => {
+const Home = () => {
   const location = useLocation();
   const [trendMovie, setTrendMovie] = useState();
 
@@ -21,3 +21,5 @@ export const Home = () => {
     </Section>
   );
 };
+
+export default Home;

@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
-import { getQueryMovie } from 'components/utils/Api';
+import { getQueryMovie } from 'utils/Api';
 import { Section } from 'pages/Home/Home.styled';
 import { Input } from './Movies.styled';
 import { MovieList } from 'components/MovieList/MovieList';
 import { Formik } from 'formik';
 import { Warn } from 'components/Reviews/Reviews.styled';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [querySearch, setQuerySearch] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -70,3 +70,4 @@ export const Movies = () => {
     </Section>
   );
 };
+export default Movies;
